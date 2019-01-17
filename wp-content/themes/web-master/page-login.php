@@ -3,7 +3,7 @@
     <div id="ifLogIn">  <?php wp_register('',''); ?></div>
 </div>
 
-<script type="text/javascript">
+<script >
     $(document).ready( function() {
 
         $("#startLog").click ( function () {

@@ -1,50 +1,28 @@
 <?php get_header(); ?>
 
     <div id="primary" class="content-area singlePost" itemscope itemtype="http://schema.org/Article">
-<!--        <div class="topSideBar" style="display: none">-->
-<!---->
-<!---->
-<!--            --><?php
-//            if ( ! empty ( $_SERVER['HTTP_REFERER'] ) )
-//            {
-//                ?>
-<!--                <a href="--><?php //echo esc_url( $_SERVER['HTTP_REFERER'] ) ?><!--">  <img src="--><?php //echo get_template_directory_uri (); ?><!--/dist/img/mobile/back.png"><span>Назад</span></a>-->
-<!--                --><?php
-//            }
-//            ?>
-<!--        </div>-->
         <main id="main" class="site-main" role="main">
-
-
             <div class=" myBorder">
-
-                <div  id="morememe">
-                    <article id="meme" class="panel-image-prop" style="background-repeat:no-repeat;background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);">
+                <div id="morememe">
+                    <article class="panel-image-prop" style="background-repeat:no-repeat;background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);">
                         <div class="panel-image neW" >
-                            <div class="newBgRed">
+                            <div class="titleArticle">
                                 <?php the_category(' / ', 'single'); ?>
                             </div>
-
-                            <div class="authoR">
-
-                                <img src="<?php echo get_template_directory_uri(); ?>/app/img/mobile/authoricon.png">
+                            <!-- <div class="authoR">
+                                <img src="<?php #echo get_template_directory_uri(); ?>/app/img/mobile/authoricon.png">
                                 <p itemprop="author">
                                     <span> Автор :</span>
                                     <span class="author">
-                                <?php echo the_author_meta('display_name', $post->post_author ); ?>
-
+                                <?php# echo the_author_meta('display_name', $post->post_author ); ?>
                             </span>
                                 </p>
-                            </div>
-
-                            <?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
-
+                            </div> -->
+                            <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
                             <div class="bottom-content">
-
                                 <p class="postCalendar"><img src="<?php echo get_template_directory_uri(); ?>/app/img/calendar.png"><span class="updated"><?php echo get_the_date() ;?></span></p>
                                 <p class="postView"><img src="<?php echo get_template_directory_uri(); ?>/app/img/counters.png"><span><?php echo the_views(); ?></span></p>
                                 <p class="postViewData"><img src="<?php echo get_template_directory_uri(); ?>/app/img/data.png"><span><?php comments_number('0', '1', '%'); ?> </span></p>
-
                             </div>
                             <div class="panel-image-prop" ></div>
                         </div><!-- .panel-image -->
@@ -52,21 +30,14 @@
                 </div><!-- end of id home-->
 
                 <?php if (have_posts()) : while (have_posts()) : the_post();
-
-
-
                 ?>
-
             </div><!-- end of my border-->
-
             <div <?php post_class() ?> id="post-<?php the_ID(); ?>">
-<!--                <h1 class="title">--><?php //the_title(); ?><!--</h1>-->
                 <p  class="forMobileAuthor">
                     Автор: <?php    echo get_the_modified_author(),
                     ' * ',  the_time('F d,  Y ') ;?>
                 </p>
             </div>
-
 
             <div class="myContent" itemprop="articleBody">
                 <?php the_content(); ?>
@@ -101,12 +72,8 @@
             </div>
 
             <div class="mini">
-
-
-                    <?php // Show the selected frontpage content.
-
+                <?php // Show the selected frontpage content.
                     $tag = single_tag_title('', false);
-
                     $args = array(
                         'post_status'      => 'publish',
                         'tag'  =>  $tag,
@@ -114,25 +81,14 @@
                         'order'       => 'DESC',
                         'posts_per_page'   => 5
                     );
-
                     $loop3 = new WP_Query($args);
-
-                    if ( $loop3->have_posts() ) :
-
-                        //echo '<div class="page-limit" data-page="'. site_url() .'/' . sunset_check_paged() . ' ">';
+                    if ( $loop3->have_posts() ) :                        
                         while ( $loop3->have_posts() ) : $loop3->the_post();
-
-
                             get_template_part( 'template-parts/page/content', 'front-page' );
-
-                        endwhile;
-                       // echo '</div>';
+                        endwhile;                       
 
                     endif; ?>
-
                     <!-- append here -->
-
-
             </div>
         </aside>
 
@@ -140,7 +96,6 @@
         <div class="container myBorder readMore">
             <div class="row">
                 <h4>Читайте также:</h4>
-
                 <?php
                 $categories = get_the_category($post->ID);
                 if ($categories) {

@@ -8,10 +8,7 @@
 
     <?php if (is_search()) { ?>
         <meta name="robots" content="noindex, nofollow" />
-    <?php } ?>
-    <title>    </title>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <?php } ?>       
     
     <?php wp_head(); ?>
     <link rel="shortcut icon" href="/favicon.ico">
@@ -29,7 +26,7 @@
                 <button class='scroll-to-top'><span>наверх</span></button>
             </div>
             <!-- ================== NAVBAR ================ -->
-            <nav class="navbar " role="navigation" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+            <nav class="navbar"  itemscope itemtype="http://www.schema.org/SiteNavigationElement">
 
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">

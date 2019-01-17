@@ -29,7 +29,7 @@ get_header(); ?>
         endif; ?>
 
         <div class="paginationArea">
-            <div  align="center" class="paginationNew">
+            <div class="paginationNew">
                 <?php
                 $args = array(
                     'mid_size'     => 5,

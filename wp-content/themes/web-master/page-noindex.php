@@ -1,22 +1,13 @@
-<?php /**
- * The template for displaying all pages
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since 1.0
- * @version 1.0
- */
+<?php /*
+*Template Name: no index
+*/ ?>
+<?php get_header(); ?>
 
-get_header(); ?>
+<script ype="text/javascript" src="/resellers_form/jquery.js"></script>
+<link rel="stylesheet" href="/resellers_form/check-form.css" media="all" />
 
-<div id="primary" class="content-area newContainer">
+<noindex>
+<div id="primary" class="content-area newContainer noIndex">
     <main id="singlepost" class="singlePost pageDefaults" role="main">
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <?php the_content(); ?>
@@ -30,7 +21,7 @@ get_header(); ?>
         </div>
 
         <div class="mini">
-            
+           
                 <?php // Show the selected frontpage content.
                 $postsPerPage = 3;
                 $args = array(
@@ -48,10 +39,10 @@ get_header(); ?>
                     echo '</div>';
                 endif; ?>
                 <!-- append here -->
-            
+         
         </div>
     </aside>
 </div><!-- #primary -->
 <div class="clear"></div>
-
-<?php get_footer();?>
+</noindex>
+<?php get_footer(); ?>

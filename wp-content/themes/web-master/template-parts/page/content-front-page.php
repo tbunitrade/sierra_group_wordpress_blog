@@ -9,35 +9,26 @@
  */
 
 ?>
-<article id="meme" class="panel-image-prop" style="background-repeat: no-repeat;background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);">
-    <div class="panel-image neW" >
-        <div class="newBgRed">
-            <?php the_category(' / ', 'single'); ?>
-        </div>
-
-        <div class="authoR">
-
-                    <img src="<?php echo get_template_directory_uri(); ?>/app/img/mobile/authoricon.png">
-                    <p itemprop="author">
-                        <span> Автор :</span>
-                        <span>
-                            <?php echo the_author_meta('display_name', $post->post_author ); ?>
-
-                        </span>
-                    </p>
-        </div>
+<article  class="meme panel-image-prop" >
+    <div class="titleArticle">        
         <a href="<?php the_permalink(); ?>">
-            <?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
+        <?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
         </a>
-
-        <a href="<?php the_permalink(); ?>" class="hrefTypeTwo"><span>Читать далее</span></a>
+        <div class="catLink">
+            <?php the_category(' / ', 'single'); ?>
+        </div>        
+    </div>
+    <div class="panel-image" style="background-repeat: no-repeat;background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);">
+        
+        
+        
 
         <div class="bottom-content">
-            <p class="postCalendar"><img src="<?php echo get_template_directory_uri(); ?>/app/img/calendar.png"><span><?php echo get_the_date() ;?></span></p>
-            <p class="postView"><img src="<?php echo get_template_directory_uri(); ?>/app/img/counters.png"><span><?php echo the_views(); ?></span></p>
-            <p class="postViewData"><img src="<?php echo get_template_directory_uri(); ?>/app/img/data.png"><span><?php comments_number('0', '1', '%'); ?> </span></p>
-
+            <p class="postCalendar"><i class="fas fa-calendar-week"></i><span><?php echo get_the_date() ;?></span></p>
+            <p class="postView"><i class="fas fa-eye"></i><span><?php echo the_views(); ?></span></p>
+            <p class="postViewData"><i class="far fa-comments"></i><span><?php comments_number('0', '1', '%'); ?> </span></p>
         </div>
-        <div class="panel-image-prop" ></div>
+        <a href="<?php the_permalink(); ?>" class="hrefTypeTwo"><span><i class="fas fa-link"></i>далее</span></a>
+       
     </div><!-- .panel-image -->
 </article><!-- #post-## -->

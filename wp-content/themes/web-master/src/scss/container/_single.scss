@@ -6,9 +6,38 @@
   display: block;
   padding-top: 30px;
 
+  .sidebarNew {
+    .neW {
+
+      .hrefTypeTwo {
+        color: #2396d5;
+         span {
+          color: #2396d5;
+        }
+      }
+      .bottom-content {
+        .postCalendar,
+        .postView,
+        .postViewData
+         {
+          span{
+            font-size: 14px;
+          }
+        }
+
+        .postView {
+          max-width: 125px;
+          top: 4px;
+        }
+        
+      }
+    }
+
+  }
+
   .myBorder{
 
-    #meme {
+    .meme {
       margin-bottom: 16px;
 
       

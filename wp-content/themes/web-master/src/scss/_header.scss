@@ -187,7 +187,8 @@ height: 55px;
     font-size: 22px;
     margin-top: 11px; 
     margin-bottom: 17px;
-    padding: 0;
+   
+    padding: 0px 10px;
     position: relative;
 
     @media (min-width: $screen-md-min) {
@@ -196,11 +197,11 @@ height: 55px;
       max-width: 274px;
       height: 101px;
       line-height: 101px;
-      font-size: 30px;
+      font-size: 30px; 
     }
 
     @media (min-width: $screen-lg-min) {
-      width: 200px;
+     
     }
 
     img{

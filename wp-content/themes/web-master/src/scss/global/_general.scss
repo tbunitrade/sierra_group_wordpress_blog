@@ -61,12 +61,14 @@ h6,
 p{
   font-family: 'MetaPro';
   font-weight: normal;
+ 
+  padding: 5px 10px;
 }
 
 /*Wrapper*/
 .container {
-  min-width: 320px;
-  padding: 0;
+ 
+  
 
   @media (min-width: $screen-md-min){
 

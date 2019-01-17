@@ -43,16 +43,16 @@
   
   @media (min-width: 768px) {
     
-  }
+  } 
   
   @media (min-width: $screen-md-min) {
     
   }
 }
 
-#meme {
+.meme {
   width: 300px;
-  height: 189px;
+  min-height: 288px;
   background-repeat: no-repeat;
   background-position:(center,center) ;
   background-size:cover;
@@ -61,32 +61,38 @@
   margin: auto;
   display: block;
   border-radius: 5px;
+  margin-top: 1em;
+  border:1px solid #2396d5;
+  overflow: hidden;
 
   @media (min-width: 550px) {
     width: 505px;
-    height: 320px;
+    min-height: 213px;
+   
   }
 
-  @media (min-width: 768px) {
-    // width: 100%;
-    // max-width: 728px;
-    // height: 397px;
-
-    // margin-bottom: 20px;
-
-    width: 46.5%;
-    /* max-width: 477px; */
-    height: 461px;
-    margin-bottom: 20px;
+  @media (min-width: 768px) {   
     display: inline-block;
-    margin: 1em;
+    width: 46.5%; 
+    margin: 0.1em;
+        
+    
+  }
+
+  @media (min-width: $screen-md-min) {
+    
+    margin: 0.5em;
+    
+    
   }
 
   @media (min-width: $screen-lg-min) {
+    margin: 1em;
     max-width: 968px;
+    min-height: 213px;
     height: 462px;
-    
-    margin-bottom: 20px;
+    margin-top: 2em;
+    margin-bottom: 2em;
   }
 
   .neWhrefTypeOne {
@@ -97,39 +103,37 @@
     font-size: 25px;
     font-family: 'MetaPro';
     font-weight: 900;
-    line-height: 33px;
-    color: $white;
-    background: $newbg;
+    line-height: 33px;    
+    color: $newbg;
     text-transform: uppercase;
+    text-transform: unset;
     text-decoration: none;
     margin: 0px 0px 0px 0px;
     padding-right: 21px;
     padding-left: 10px;
 
-    @media (min-width: 550px) {
-      font-size: 45.82px;
-      line-height: 58.33px;
-      text-transform: uppercase;
+    @media (min-width: 550px) {      
+
       margin: 0px 0px 0px 0px;
       padding-right: 10px;
       padding-left: 15px;
     }
 
-    @media (min-width: 768px) {
-      margin: 0px 0px 0px 0px;
-      font-size: 42.5px;
-      line-height: 59.17px;
-      text-transform: uppercase;
+    @media (min-width: 768px) {     
+    
       padding-right: 21px;
       padding-left: 6px;
     }
 
-    @media (min-width: $screen-md-min) {
-      font-size: 30px;
+    @media (min-width: $screen-lg-min) {
+      font-size: 23px;
       font-weight: 900;
-      line-height: 56px;
+      line-height: 29px;
       font-family: Open Sans;
     }
+
+    // font-size: 45.82px;
+    //   line-height: 58.33px;
   }
 
   .rowTitle {
@@ -138,18 +142,18 @@
     margin: 0 auto;
     position: relative;
     padding: 20px 10px 10px 10px;
-    height: 130px;
+    min-height: 130px;
 
     @media (min-width: 550px) {
       padding: 33px 2px;
-      height: 254px;
+      min-height: 254px;
     }
 
     @media (min-width: 768px) {
       padding: 65px 20px;
       padding: 5px 0px;
-      height: 389px;
-      height: 322px;
+      
+      min-height: 322px;
       width: 85%;
     }
 
@@ -166,8 +170,10 @@
   .rowBottom {
     width: 100%;
     display: block;
-    position: relative;
-    bottom: -18px;
+    position: absolute;
+    bottom: 10px;
+    padding-bottom: 20px;
+    background: #ccc;
 
     @media (min-width: 770px) {
       width: 86%;

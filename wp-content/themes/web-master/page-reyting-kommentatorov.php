@@ -98,7 +98,7 @@
 
 
 
-    <script type="text/javascript">
+    <script >
         $(document).ready(function() {
             $("#content div").hide(); // Скрываем содержание
             $("#tabs li:first").attr("id","current"); // Активируем первую закладку

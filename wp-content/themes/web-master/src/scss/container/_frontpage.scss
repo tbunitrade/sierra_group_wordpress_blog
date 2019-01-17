@@ -11,8 +11,7 @@
     display: block;
     width:100%;
     max-width: 768px;
-    height: 462px;
-    position: relative;
+    height: 100%;
 
     .hrefTypeOne {
       display: none;
@@ -33,15 +32,19 @@
 
     .hrefTypeTwo {
       display: block;
-      background: url(../img/linktopost.png);
+      /*background: url(../img/linktopost.png);*/
       background-size: contain;
       background-repeat: no-repeat;
       width: 25px;
       height: 25px;
       position: absolute;
       right: 24px;
-      bottom: 20px;
+      bottom: 18px;
       z-index: 999;
+
+      @media (min-width: $screen-sm-min) {
+        bottom: 10px;
+      }     
 
       @media (min-width: $screen-lg-min) {
         bottom: 12px;
@@ -51,8 +54,10 @@
         display: inline-block;
         position: inherit;
         right: 35px;
-        width: 111px;
-        top: 1px;
+        right: 0;
+        width: 120px;
+        text-align: center;
+        top: 8px;
         font-size: 17px;
         font-weight: 900;
         color: $white;

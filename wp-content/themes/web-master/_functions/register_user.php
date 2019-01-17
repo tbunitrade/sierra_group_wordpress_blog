@@ -75,7 +75,7 @@ function registration_validation( $username, $password, $email ){
 
             );
             $user = wp_insert_user($userdata);
-            echo '<script type="text/javascript">
+            echo '<script >
              $(document).ready( function() {
                     
                         $(".layoutAuthArea").show();

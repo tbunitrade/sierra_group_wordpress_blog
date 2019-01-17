@@ -1,6 +1,6 @@
-<?php /**
- Template Name: Contacts
- **/ ?>
+<?php /*
+* Template Name: Contacts
+**/ ?>
 <?php get_header(); ?>
 
 
@@ -18,23 +18,37 @@
                     <?php endwhile; endif; ?>
 
                     <div class="myData">
-                        <h3><?php the_field ('my_data');?></h3>
+                        <h3>Форма обратной связи - не работает</h3>
 
-                        <a href="mailto:<?php the_field ('email') ;?>"><img src="<?php the_field ('emailimg') ;?>"> - <?php the_field ('email') ;?></a>
-                        <a href="mailto:<?php the_field ('telegram') ;?>"><img src="<?php the_field ('telegramimg') ;?>"> - <?php the_field ('telegram') ;?></a>
+                        <form action="" method="POST" >
+                            <fieldset>
+                                <input type="text" placehoder="Ваше имя" />
+                                <input type="number" placehoder="Ваш телефон" />
+                                <input type="email" placehoder="Ваш телефон" />
+                                <input type="submit" value="Отправить" />
+                            </fieldset>
+                            
+                            
+
+                        </form>
+
+                        <a href="mailto:tbunitrade@gmail.com">tbunitrade@gmail.com</a>
+                        <a href="skype:oleksandr.sonich.s-group">Skype:Oleksandr.sonich.s-group</a>
+                        <a href="tel:+380685689578">+38-068-568-95-78</a>
+                        
 
                     </div>
 
                     <div class="chat">
                         <h3>
-                            <?php the_field ('slogan') ;?>
+                            <?php #the_field ('slogan') ;?>
                         </h3>
 
                         <p>
-                            <?php the_field ('slogan_text') ;?>
+                            <?php #the_field ('slogan_text') ;?>
                         </p>
-                        <a href="<?php the_field ('telegram_chat') ;?>"><img src="<?php the_field ('telegramimgbottom') ;?>"> -
-                        <?php the_field ('telegram_chat') ;?>
+                        <a href="<?php #the_field ('telegram_chat') ;?>"><img src="<?php #the_field ('telegramimgbottom') ;?>"> -
+                        <?php #the_field ('telegram_chat') ;?>
                         </a>
 
                     </div>

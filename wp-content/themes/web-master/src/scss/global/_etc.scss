@@ -76,7 +76,7 @@
   
   }
 
-  #meme {
+  .memeMini {
     width: 100%;
     max-width: 372px;
     height: 238px;
@@ -137,13 +137,13 @@
     .hrefTypeTwo{
       width: 18px;
       height: 18px;
-      background-size: contain;
+      // background-size: contain;
       bottom: 12px;
       bottom: -37px;
       right: 6px;
 
-      border: 1px solid white;
-      border-radius: 50%;
+      // border: 1px solid white;
+      // border-radius: 50%;
 
       span {
         font-size: 13px;
@@ -176,7 +176,7 @@
       }
     }
 
-    .newBgRed {
+    .titleArticle {
       height: 38px;
       line-height: 38px;
       left: 0px;
@@ -204,9 +204,9 @@
 }
 
 
-.neW {
+.panel-image {
 
-  .newBgRed {
+  .titleArticle {
     display: inline-block;
     height: 57px;
     background:#2396d5 ;
@@ -238,18 +238,27 @@
       font-weight: 900;
       font-size: 0.71em;
     }
+
+    .catLink {
+      background: blue;
+      a {
+        color: white;
+      }
+      
+    }
   }
 
   .entry-title {
     position: absolute;
-    font-size: 2em; 
-    line-height: 3em; 
+    font-size: 1.6em; 
+    line-height: 2em; 
     top:100px;
     font-weight: 900;
     color: $black;
     width: 88%;
     left:0 ;
     text-transform: uppercase;
+    background: #2396d5;
 
     @media (min-width: $screen-md-min){
       width: 96%;
@@ -259,48 +268,76 @@
 
   .bottom-content {
     position: absolute;
-    bottom: 15px;
+    bottom: 0px;
     left: 0;
     z-index: 99;
     width: 68%;
-
     width: 100%;
     background: #2396d5;
-    height: 45px;
-    line-height: 49px;
+    height: 65px;
+    line-height: 49px; 
 
+    @media (min-width: 550px) {
+     
+    }
 
+    @media (min-width: $screen-sm-min) {
+   
+    }
     @media (min-width: $screen-md-min) {
       bottom: 0px;
     }
+
     @media (min-width: $screen-lg-min) {
-      bottom: 0px;
-    }
+      height: 45px;
+     }
+    
 
     .postCalendar,
     .postView,
     .postViewData {
-      display: inline-block;
+      display: none;
       vertical-align: top;
       position: relative;
+
+      @media (min-width: $screen-sm-min) {
+        display: inline-block;
+      }
     }
 
     .postCalendar{
-      left: 10px;
+      left: 1px;
+      padding-right: 3px;
+      margin-right: 2px;
 
       @media (min-width: $screen-lg-min) {
         width: 100%;
         max-width: 130px;
+        padding-right: 0px;
+        margin-right: 0px;
       }
 
       span {
         position: relative;
         color: $white;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: bold;
         left: 11px;
-        top: 0;
-        line-height: 32px; 
+        top: -6px;
+        line-height: 6px;
+        padding-right: 1em;
+
+        @media (min-width: $screen-sm-min) {
+          padding-right: 0em;
+        }
+
+        @media (min-width: $screen-md-min) {
+          font-size: 18px;
+          
+          left: 11px;
+          top: 0;
+          line-height: 32px; 
+        }
       }
 
       img {
@@ -318,10 +355,9 @@
       }
     }
 
-    .postView {
-      
+    .postView {      
       width: 100%;
-      max-width: 130px;
+      max-width: 150px;
 
       span {
         position: relative;
@@ -378,5 +414,18 @@
         }
       }
     }
+
+    .fas,
+    .far {
+      color: white;
+    }
+  }/*end of bottom content*/
+}
+
+
+.tab-content {
+ 
+  .active {    
+      background: white;
   }
 }

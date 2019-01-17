@@ -8,6 +8,12 @@ require_once( '_functions/init.php' );
 // load CSS & JS scripts
 require_once( '_functions/load_scripts.php' );
 
+// Open Graph
+require_once( '_functions/open_graph.php' );
+
+// Sierra Secure plugin
+require_once( '_functions/secure_plugin.php' );
+
 // Bootstrap NavWalker
 require_once( '_functions/wp_bootstrap_navwalker.php' );
 
@@ -52,6 +58,9 @@ function remove_head_scripts() {
     add_action('wp_footer', 'wp_print_head_scripts', 5);
 }
 add_action( 'wp_enqueue_scripts', 'remove_head_scripts' );
+
+
+
 
 
 //// Async load
@@ -184,3 +193,6 @@ function footer_enqueue_scripts(){
     add_action('wp_footer','wp_print_head_scripts',5);
 }
 add_action('after_setup_theme','footer_enqueue_scripts');
+
+
+
